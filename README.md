@@ -46,6 +46,12 @@ terraform apply -var-file="secret.tfvars"
 
 Terraform should output identity pool ID. we use this when starting 'app'.
 
+**NOTE**
+We have to deploy the configuration hosted on AWS AppConfig.
+Please see [Step 5: Deploying a configuration](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-deploying.html) for detailed information.
+
+
+
 #### app
 
 ```bash
@@ -69,6 +75,6 @@ cd client
 yarn start
 ```
 
-You should see a webpage on `localhost:3000` and an `start` button on it.
+You should see a webpage on `localhost:3000` and a `start` button on it.
 You can test the authflow by pushing the button!
 
