@@ -89,3 +89,9 @@ yarn start
 You should see a webpage on `localhost:3000` and a `start` button on it.
 You can test the authflow by pushing the button!
 
+# References
+
+- [Developer authenticated identities authflow - Enhanced authflow](https://docs.aws.amazon.com/cognito/latest/developerguide/authentication-flow.html)
+- [AWS SDK for JavaScript v3](https://docs.aws.amazon.com/AWSJavaScriptSDK/v3/latest/index.html)
+- [Using Developer Authenticated Identities with Cognito Identity Pools In TypeScript](https://spin.atomicobject.com/2020/02/26/authenticated-identities-cognito-identity-pools/)
+- [Exploring Feature Flag use AWS AppConfig](https://dev.to/aws-builders/exploring-feature-flag-use-aws-appconfig-9f9)
