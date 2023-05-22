@@ -6,9 +6,19 @@ This repository demonstrates how to implement [Developer authenticated identitie
   - 'Developer Provider' (backend application implemented with Golang)
 - [client](./client)
   - Frontend application running on 'Device' 
-  - This application access a configuration hosted on [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) using credentials obtained through the authflow.
+  - This application accesses a configuration hosted on [AWS AppConfig](https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html) using credentials obtained through the authflow.
 - [infra](./infra) 
   - Terraform scripts to build Amazon Cognito and AWS AppConfig resources 
+
+**NOTE:**
+
+The following steps are omitted in the application of this repository for simplicity.
+
+- `1. Login via Developer Provider (code outside of Amazon Cognito)`
+- `2. Validate the user login (code outside of Amazon Cognito)`
+
+The application starts the flow from `3. GetOpenIdTokenForDeveloperIdentity`.
+
 
 ## How to run
 
@@ -44,9 +54,10 @@ terraform apply -var-file="secret.tfvars"
 
 ```
 
-Terraform should output identity pool ID. we use this when starting 'app'.
+Terraform should output identity pool ID. We use this when starting 'app'.
 
-**NOTE**
+**NOTE:**
+
 We have to deploy the configuration hosted on AWS AppConfig.
 Please see [Step 5: Deploying a configuration](https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-deploying.html) for detailed information.
 
